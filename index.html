@@ -1,0 +1,97 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="letter" id="letter">
+            <div class="mouse_scroll">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div>
+                    <span class="m_scroll_arrows unu"></span>
+                    <span class="m_scroll_arrows doi"></span>
+                    <span class="m_scroll_arrows trei"></span>
+                </div>
+            </div>
+            <div class="eucalyptu">
+            </div>
+            <div class="greeting letter-info-color">
+                <span>Selen</span>
+                <span>&</span>
+                <span>Gürkan</span>
+            </div>
+            <div class="date letter-info-color">
+                <span>16</span>
+                <span>11</span>
+                <span>24</span>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="eucalyptu">
+            </div>
+            <div class="greeting">
+                <span>Selen</span>
+                <span>&</span>
+                <span>Gürkan</span>
+            </div>
+            <div class="invitation">
+                <div class="parent-names">
+                    <div>
+                        <span>YUMLU AİLESİ</span>
+                    </div>
+                    <div>
+                        <span>TUĞ AİLESİ</span>
+                    </div>
+                </div>
+               <span>Bu özel günümüzde sizleri de aramızda görmekten mutluluk duyarız</span>
+            </div>
+            <div class="loc-info">
+                <div class="date">
+                    <span>16 KASIM 2024</span>
+                    <span>CUMARTESİ</span>
+                </div>
+                <div class="wod-time">
+                    <span>YEMEK : 19.00</span>
+                </div>
+                <a href="https://maps.app.goo.gl/PGVR8yxoVQ2dziAj7">
+                    <div class="location">
+                        <span>CASE DE GARDEN</span>
+                        <span>BALÇOVA/İZMİR</span>
+                    </div>
+                </a>
+   
+            </div>
+        </div>
+       
+    </body>
+</html>
+
+
+<script type="text/javascript">
+    
+var letter = document.getElementById("letter");
+
+var startX;
+var startY;
+
+letter.addEventListener("touchstart", touchStart, false);
+letter.addEventListener("touchmove", touchMove, false);
+
+function touchStart(event) {
+  var touch = event.touches[0];
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+function touchMove(event) {
+  if (!startX || !startY) {
+    return;
+  }
+
+  document.getElementById('letter').classList.add('swipe-down');
+
+  event.preventDefault();
+}
+
+ </script>
